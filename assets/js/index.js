@@ -1,7 +1,7 @@
 // 入口函数
 $(function () {
     // 1.获取用于信息
-    getUserInof();
+    getUserInfo();
     // 退出
     let layer = layui.layer;
     $('#btnLogout').on('click', function () {
@@ -20,7 +20,7 @@ $(function () {
 
 // 获取用于信息（封装到入口函数的外面了）
 // 原因：后面其他的页面要调用。
-function getUserInof() {
+function getUserInfo() {
     // 发送Ajax
     $.ajax({
         type: 'get',
