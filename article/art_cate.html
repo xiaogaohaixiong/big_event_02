@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 引入layui的样式 -->
+    <link rel="stylesheet" href="/assets/lib/layui/css/layui.css">
+    <!-- 引入本页面的样式 -->
+    <link rel="stylesheet" href="/assets/css/article/art_cate.css">
+
+</head>
+
+<body>
+
+    <!-- 卡片区域 -->
+    <div class="layui-card">
+        <div class="layui-card-header">
+            <span>文章类别管理</span>
+            <button type="button" class="layui-btn layui-btn-normal layui-btn-sm">添加类别</button>
+        </div>
+        <div class="layui-card-body">
+            <!-- 文章分类区域 -->
+            <table class="layui-table">
+                <colgroup>
+                    <col>
+                    <col>
+                    <col width="200">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>分类名称</th>
+                        <th>分类别名</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>贤心</td>
+                        <td>2016-11-29</td>
+                        <td>
+                            <button type="button" class="layui-btn layui-btn-xs">编辑</button>
+                            <button type="button" class="layui-btn layui-btn-xs layui-btn-danger">编辑</button>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!-- 引入模板引擎 -->
+    <script src="/assets/lib/template-web.js"></script>
+    <!-- 定义模板 -->
+    <script type="text/html" id="tpl-art-cate">
+        {{each data item value}}
+        <tr>
+            <td>{{item.name}}</td>
+            <td>{{item.alias}}</td>
+            <td>
+                <button type="button" class="layui-btn layui-btn-xs">编辑</button>
+                <button type="button" class="layui-btn layui-btn-xs layui-btn-danger">编辑</button>
+            </td>
+        </tr>
+        {{/each}}
+    </script>
+
+    <!-- 引入layui.all.js -->
+    <script src="/assets/lib/layui/layui.all.js"></script>
+    <!-- 引入jQuery.js -->
+    <script src="/assets/lib/jquery.js"></script>
+    <!-- 引入baseAPI。js -->
+    <script src="/assets/js/baseAPI.js"></script>
+    <!-- 引入本界面js -->
+    <script src="/assets/js/article/art_cate.js"></script>
+</body>
+
+</html>
